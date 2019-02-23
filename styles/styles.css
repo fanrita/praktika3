@@ -66,30 +66,23 @@
 }
 
 .image {
-    float: left;
     padding-right: 20px;
     width: 30%;
+    display: block;
+    margin: 0 auto;
+
 }
 
-.article-text {
-    width: 70%;
-    float: right;
-}
-
-.article-text-left{
-    float: left;
-}
-
-.image-right {
-    float: right;
-    padding: 0 0 0 20px;
-}
 
 .text {
     background-color: darksalmon;
     border: 3px dashed chocolate;
     border-radius: 20px;
     padding: 10px;
+}
+
+h2 {
+    text-align: center;
 }
 
 .arrow-next{
@@ -99,7 +92,7 @@
 .gallery {
     display: grid;
     grid-gap: 0 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     margin: 10px 70px;
 }
 
@@ -115,6 +108,10 @@
     display: inline-block;
     text-align: center;
     border: 4px dotted firebrick;
+}
+
+.image-link1, .image-link2 {
+    display: none;
 }
 
 .text-gallery {
@@ -167,4 +164,58 @@
 
 .active {
     background-color: red;
+}
+
+.footer {
+    background: cadetblue;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.social-items {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.social-items li {
+    margin: 0 10px 0 10px;
+}
+
+@media (min-width: 700px)  {
+    .image {
+        display: inline-block;
+        float: left;
+        padding-right: 20px;
+        width: 30%;
+    }
+
+    .image-right {
+        float: right;
+        padding: 0 0 0 20px;
+    }
+
+    .article-text {
+        width: 70%;
+        float: right;
+    }
+
+    .article-text-left{
+        float: left;
+    }
+
+    .image-right {
+        padding: 0 0 0 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
